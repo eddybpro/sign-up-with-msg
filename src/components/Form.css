@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(234, 29%, 20%);
+  --color-brand-2: hsl(231, 7%, 60%);
+  --color-brand-3: hsl(4, 100%, 67%);
+  --color-brand-3-1: hsla(4, 100%, 67%, 0.2);
+  --color-brand-4: hsl(0, 0%, 100%);
+
+  --color-site-1: hsl(235, 18%, 26%);
+  --color-site-2-1: #ff527b;
+  --color-site-2-2: #ff6a3a;
+
+  --font-roboto: "Roboto", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-roboto);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+label {
+  font-size: 1.6rem;
+  color: var(--color-brand-1);
+  position: relative;
+  font-weight: 700;
+}
+
+label.error::before {
+  content: "Valid email required";
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  font-size: 1.2rem;
+  color: var(--color-brand-3);
+}
+
+#email {
+  display: block;
+  color: var(--color-brand-1);
+  background-color: transparent;
+  width: 100%;
+  border: 1.5px solid var(--color-brand-2);
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  margin: 1rem auto 2rem;
+  font-size: 1.6rem;
+}
+
+#email.error {
+  border-color: var(--color-brand-3);
+  background-color: var(--color-brand-3-1);
+  color: var(--color-brand-3);
+}
+
+.FormBtn {
+  display: block;
+  width: 100%;
+  margin: auto;
+  background: var(--color-brand-1);
+  color: var(--color-brand-4);
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.FormBtn:hover {
+  background: linear-gradient(
+    120deg,
+    var(--color-site-2-1),
+    var(--color-site-2-2)
+  );
+}
+
+@media screen and (min-width: 769px) {
+  #email {
+    margin-bottom: 3rem;
+  }
+}

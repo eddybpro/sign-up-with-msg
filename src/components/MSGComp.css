@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(234, 29%, 20%);
+  --color-brand-2: hsl(231, 7%, 60%);
+  --color-brand-3: hsl(4, 100%, 67%);
+  --color-brand-3-1: hsla(4, 100%, 67%, 0.2);
+  --color-brand-4: hsl(0, 0%, 100%);
+
+  --color-site-1: hsl(235, 18%, 26%);
+
+  --font-roboto: "Roboto", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-roboto);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.MSGBox {
+  width: 100%;
+  min-height: 100vh;
+  padding: 12rem 2rem 2rem;
+  position: relative;
+}
+
+@media screen and (min-width: 769px) {
+  .MSGBox {
+    max-width: 40rem;
+    padding: 3rem 2rem 2rem;
+    min-height: auto;
+    height: 44rem;
+  }
+}
+
+.MSGBox > img {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+}
+
+.MSGBox-Title {
+  font-size: 3.4rem;
+  color: var(--color-brand-1);
+  margin-bottom: 1.5rem;
+}
+
+.MSGBox-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-1);
+  margin-bottom: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.MSGBox-Para > span {
+  font-weight: 700;
+}
+
+.MSGBox-Btn {
+  display: block;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  border: none;
+  outline: none;
+  background-color: var(--color-brand-1);
+  color: var(--color-brand-4);
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.MSGBox-Btn:hover {
+  background: linear-gradient(
+    120deg,
+    var(--color-site-2-1),
+    var(--color-site-2-2)
+  );
+}
